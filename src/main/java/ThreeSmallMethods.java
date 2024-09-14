@@ -9,9 +9,8 @@ public class ThreeSmallMethods {
     }
 
     public int firstTwoDigitInteger(int[] numbers) {
-        for (int i = 0; i < numbers.length; i++) {
-            int number = numbers[i];
-            if (number>=10 && number<100) {
+        for (int number : numbers) {
+            if (number >= 10 && number < 100) {
                 return number;
             }
         }
