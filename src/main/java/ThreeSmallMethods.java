@@ -1,8 +1,13 @@
 public class ThreeSmallMethods {
 
     public boolean isYoung(int age) {
-        return age <= 30;
+        if (age < 0) {
+            throw new IllegalArgumentException("Age cannot be negative");
+    } else {
+            return age <= 30;
+        }
     }
+
 
     public boolean hasLegalGenderManInSweden(String personalNumber){
         if (personalNumber.length() == 10) {

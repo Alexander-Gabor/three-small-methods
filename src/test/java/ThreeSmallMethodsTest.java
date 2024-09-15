@@ -25,6 +25,12 @@ class ThreeSmallMethodsTest {
     assertTrue(isYoung);
   }
 
+  @Test
+  void isYoungShouldNotNegativeNumbers(){
+    int data = -5;
+    assertThrows(IllegalArgumentException.class, () -> methods.isYoung(data));
+  }
+
 
   @ParameterizedTest
   @ValueSource(strings = {
